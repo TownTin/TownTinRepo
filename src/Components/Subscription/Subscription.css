@@ -1,0 +1,74 @@
+/* Subscription styles */
+
+#subscription {
+    height: 90vh;
+    margin-top: 70px;
+}
+
+#menu h2,
+#subscription h2,
+.aboutus h2,
+.feedback h2 {
+    color: #ac3b61;
+    margin: 24px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#subscription .card {
+    border: none;
+    background: #ac3b61;
+    color: white;
+}
+
+.subscription-single:hover .side-two {
+    transform: rotateY(0deg);
+    border-radius: 5px;
+}
+
+.subscription-single:hover .side-one {
+    transform: rotateY(180deg);
+}
+
+.content-area {
+    transform: perspective(1000px);
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.side-one {
+    position: relative;
+    transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.side-two {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(-180deg);
+}
+
+.side-one,
+.side-two {
+    backface-visibility: hidden;
+    transition: 1s;
+    transform-style: preserve-3d;
+    width: 100%;
+}
+
+.side-one .card,
+.side-two .card {
+    min-height: 360px;
+}
+
+
+/* @media screen and (min-width: 480px) {
+   .side-one,
+   .side-two {
+      
+       width: 0px;
+   }
+} */

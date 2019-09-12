@@ -1,0 +1,27 @@
+.carousel-item img {
+    position: relative;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.7;
+}
+
+.overlay {
+    position: absolute;
+    top: 230px;
+    /* background: rgb(0, 0, 0); */
+    background: rgba(0, 0, 0, 0.5);
+    /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    color: white;
+    font-size: 40px;
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 1.5;
+}
+
+.hometext {
+    font-size: 24px !important;
+}

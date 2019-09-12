@@ -1,0 +1,8 @@
+.about-feedback {
+    display: flex;
+    background-color: #edc7b7;
+    color: #ac3b61;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

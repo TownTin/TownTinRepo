@@ -1,0 +1,28 @@
+#menu {
+    height: 90vh;
+    margin-top: 70px;
+}
+
+.nav-tabs .nav-item {
+    width: 50%;
+    background-color: #ac3b61;
+    padding: 12px auto;
+    text-align: center;
+}
+
+a.nav-item.active {
+    width: 50%;
+    background-color: white !important;
+    box-shadow: 5px 5px 1px #e7717d inset;
+    height: 50px;
+}
+
+table .items {
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 5px 5px #e7717d;
+}
+
+thead {
+    box-shadow: 5px 5px #e7717d inset;
+}
