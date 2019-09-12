@@ -7,8 +7,7 @@ const About = () => {
             <div className="row">
                 <div className="aboutus col-xs-6 col-sm-6 col-md-6 bg-white">
                     <h2>About Us</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta sint reprehenderit consequatur quae cumque saepe iste.
-                    </p>
+                    <p>We provide tasty hiegenic home quality food in best price.</p>
                 </div>
                 <div className="feedback col-xs-6 col-sm-6 col-md-6">
                     <h2>We Value Your Feedback</h2>
