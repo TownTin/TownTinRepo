@@ -3,7 +3,7 @@ import './Subscription.css'
 
 const Subscription = () => {
     return (
-        <section id="subscription">
+        <section className="subscription">
             <h2>Subscriptions</h2>
             <div className="container">
                 <div className="row">

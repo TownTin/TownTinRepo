@@ -2,15 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // import 'jquery';
 // import 'popper.js';
-import './Carousel.css';
-import bg1 from '../../images/bg1.jpg';
-import bg2 from '../../images/bg2.jpg';
-import bg3 from '../../images/bg3.jpg';
+import './LandingPage.css';
+import bg1 from '../../media/bg1.jpg';
+import bg2 from '../../media/bg2.jpg';
+import bg3 from '../../media/bg3.jpg';
 
 
-const Carousel = () => {
+const LandingPage = () => {
     return (
-        <section className="Homepage my-1">
+        <section className="Homepage">
             <div id="carouselControls" className="carousel slide" data-ride="carousel">
                 <ol className="carousel-indicators">
                     <li data-target="#carouselIndicators" data-slide-to="0" className="active"></li>
@@ -30,9 +30,9 @@ const Carousel = () => {
                         <div className="overlay">
                             <strong>ARE YOU MISSING HOME FOOD ?</strong> <br />
                             <p className="hometext">NO WORRIES !!! WE WILL PROVIDE YOUR FAVOURITE FOOD</p>
-                            <div className="d-flex justify-content-lg-around container align-items-center">
-                            <button className="btn btn-lg btn-dark pr-5 pl-5"><Link className="nav-link border-0" to="/FoodMenu/FoodMenu">OUR MENU</Link></button> 
-                                <button className="btn btn-lg btn-dark"><Link className="nav-link border-0" to="/Subscription/Subscription">OUR SUBSCRIPTION PLANS </Link></button> 
+                            <div className="d-inline-block container">
+                                    <button className="btn btn-lg btn-light pr-5 pl-5"><Link className="nav-link border-0 text-danger" to="/FoodMenu/FoodMenu">OUR MENU</Link></button>
+                                    <button className="btn btn-lg btn-dark"><Link className="nav-link border-0" to="/Subscription/Subscription">OUR SUBSCRIPTION PLANS </Link></button>
                              </div>   
                         </div>
                     </div>
@@ -55,6 +55,6 @@ const Carousel = () => {
 }
 
 
-export default Carousel;
+export default LandingPage;
 
 

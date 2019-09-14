@@ -1,14 +1,15 @@
 import React, { Fragment } from 'react';
 import './Navbar.css';
-import { BrowserRouter as Router,Link, NavLink,Route } from 'react-router-dom';
+import { BrowserRouter as Router,NavLink,Route } from 'react-router-dom';
 import Subscription from '../Subscription/Subscription';
 import FoodMenu from '../FoodMenu/FoodMenu';
-import Carousel from '../Carousel/Carousel';
+import LandingPage from '../LandingPage/LandingPage';
 import About from '../About/About';
-import Modal from '../Modal/Modal';
+import Modal from '../ContactUs/ContactUs';
 
 
-const Navbar = () => {
+const Navbar = (props) => {
+    const { showModal } = props.showModal;
     return (
         <Router>
         <Fragment>
@@ -22,10 +23,10 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item active">
-                                    <NavLink className="nav-link" to="/Carousel/Carousel">Home <span className="sr-only">(current)</span></NavLink>
+                                    <NavLink className="nav-link" to="/LandingPage/LandingPage">Home <span className="sr-only">(current)</span></NavLink>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/FoodMenu/FoodMenu">Food Menu</Link>
+                                <NavLink className="nav-link" to="/FoodMenu/FoodMenu">Food Menu</NavLink>
                             </li>
                             <li className="nav-item">
                                     <NavLink className="nav-link" to="/Subscription/Subscription">Subscription</NavLink>
@@ -33,18 +34,18 @@ const Navbar = () => {
                             <li className="nav-item">
                                     <NavLink className="nav-link" to="/About/About">About Us</NavLink>
                             </li>
-                        </ul>
-                            <button type="button" className="btn btn-light my-2 my-sm-0" data-toggle="modal" data-target="#modal">Contact Us</button>
-                            <Modal/>
+                            </ul>
+                            <button type="button" className="btn btn-light my-2 my-sm-0"  onClick={props.handleModalShowClick}>Contact Us</button>
+                            {showModal ? (<Modal handleModalCloseClick={props.handleModalCloseClick} />) : null}
                             
                     </div>
 
                 </nav>
                 </header>
-                <Route path="/Carousel/Carousel" component={Carousel} />
-                <Route path="/FoodMenu/FoodMenu" component={FoodMenu} />
-                <Route path="/Subscription/Subscription" component={Subscription} />
-                <Route path="/About/About" component={About} />
+                <Route path="/" exact component={LandingPage} />
+                <Route path="/FoodMenu/FoodMenu" exact component={FoodMenu} />
+                <Route path="/Subscription/Subscription" exact component={Subscription} />
+                <Route path="/About/About" exact component={About} />
                 
             </Fragment>
         </Router>
@@ -52,3 +53,5 @@ const Navbar = () => {
 }
 
 export default Navbar;
+
+// data - toggle="modal" data - target="#modal"

@@ -1,30 +1,41 @@
 import React, { Component } from 'react';
-// import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from './Components/Header/Navbar';
-// import Carousel from './Components/Carousel/Carousel';
-// import FoodMenu from './Components/FoodMenu/FoodMenu';
-// import Subscription from './Components/Subscription/Subscription';
-// import About from './Components/About/About';
 import Values from './Components/Values/Values';
 import Footer from './Components/Footer/Footer';
 import './App.css';
+// import ErrorPage from './Components/ErrorPage/ErrorPage';
 
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.handleModalShowClick = this.handleModalShowClick.bind(this);
+    this.handleModalCloseClick = this.handleModalCloseClick.bind(this);
+    this.state = {
+      showModal: false,
+    }
+  }
+
+  handleModalShowClick(e) {
+    e.preventDefault();
+    this.setState({
+      showModal: true
+    })
+  }
+
+  handleModalCloseClick() {
+    this.setState({
+      showModal: false
+    })
+  }
+
   render() {
     return (
-        <div className="container-fluid">
-          <Navbar />
-          {/* <Route exact path="/" component={Carousel} /> */}
-          {/* <Route path="/Components/FoodMenu/FoodMenu" exact component={FoodMenu} /> */}
-          {/* <Route path="/Components/Subscription/Subscription" component={Subscription} /> */}
-          {/* <Route path="/Components/About/About" component={About} /> */}
-          {/* <Carousel/>
-          <FoodMenu/>
-          <Subscription/>
-          <About /> */}
-          <Values/>
+      <div className="container-fluid">
+         <Navbar showModal={this.state} handleModalShowClick={this.handleModalShowClick} handleModalCloseClick={this.handleModalCloseClick}/>
+         <Values/>
           <Footer/>
+        {/* <ErrorPage/> */}
         </div>
     )
   }

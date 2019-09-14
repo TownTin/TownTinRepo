@@ -1,3 +1,7 @@
+.Homepage {
+    height: 100vh;
+}
+
 .carousel-item img {
     position: relative;
     height: 100vh;
@@ -8,7 +12,7 @@
 
 .overlay {
     position: absolute;
-    top: 230px;
+    top: 190px;
     /* background: rgb(0, 0, 0); */
     background: rgba(0, 0, 0, 0.5);
     /* Black see-through */
@@ -17,7 +21,7 @@
     transition: .5s ease;
     color: white;
     font-size: 40px;
-    padding: 20px;
+    padding: 30px 20px;
     text-align: center;
     letter-spacing: 1.5;
 }
